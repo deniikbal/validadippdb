@@ -66,6 +66,10 @@
                                             <i class="fa-solid fa-user-check"></i> Un Valididasi
                                         </button>
                                     @endif
+                                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                                data-bs-target="#unverifikasi{{$user->id}}">
+                                            Un-Verifikasi
+                                        </button>
                                     <a href="{{route('home')}}" class="btn btn-danger btn-sm"><i
                                             class="fa-solid fa-arrow-left"></i> Back</a>
 
@@ -327,7 +331,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <h5>Data Orang Tua Oke</h5>
+                            <h5>Data Orang Tua</h5>
                             <hr>
                             <div class="row mb-2">
                                 <div class="col-sm-4">
@@ -714,6 +718,32 @@
                             class="fa-solid fa-xmark"></i> Close
                     </button>
                     <button type="submit" class="btn btn-warning"><i class="fa-solid fa-user-check"></i> UnValidasi
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="unverifikasi{{$user->id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Un Verifikasi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger"> Yakin mau unvalidasi data {{$user->name}}?</p>
+            </div>
+            <div class="modal-footer">
+                <form action="{{route('unverifikasi',$user->id)}}" method="post">
+                    @csrf
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i
+                            class="fa-solid fa-xmark"></i> Close
+                    </button>
+                    <button type="submit" class="btn btn-dark"><i class="fa-solid fa-user-check"></i> UnVerifikasi
                     </button>
                 </form>
             </div>

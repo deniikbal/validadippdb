@@ -13,7 +13,8 @@
     <!-- CSS only -->
 
 
-    <link rel="stylesheet" type="text/css" href="{{asset('/lib/@fortawesome/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="{{asset('/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
     <link href="{{asset('/lib/typicons.font/typicons.css')}}" rel="stylesheet">
     <link href="{{asset('/lib/prismjs/themes/prism-vs.css')}}" rel="stylesheet">
@@ -69,10 +70,7 @@
                                     <a href="{{ route('validasi.edit', $item->id) }}" target="_blank"
                                        class="btn btn-secondary btn-sm">
                                         <i class="fa-solid fa-person-circle-check"></i> Verifikasi</a>
-                                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#unverifikasi{{$item->id}}">
-                                        Un-Verifikasi
-                                    </button>
+
                                 </td>
                             </tr>
                         @endforeach
@@ -88,31 +86,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="unverifikasi{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Un Verifikasi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-danger"> Yakin mau unvalidasi data {{$item->name}}?</p>
-            </div>
-            <div class="modal-footer">
-                <form action="{{route('unvalidasi',$item->id)}}" method="post">
-                    @csrf
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i
-                            class="fa-solid fa-xmark"></i> Close
-                    </button>
-                    <button type="submit" class="btn btn-warning"><i class="fa-solid fa-user-check"></i> UnValidasi
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"

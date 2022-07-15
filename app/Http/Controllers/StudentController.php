@@ -67,5 +67,13 @@ class StudentController extends Controller
         ]);
         return redirect()->back()->with('success', 'Data berhasil di Validasi');
     }
+    public function unverifikasi($id)
+    {
+        $student = Student::findOrFail($id);
+        $student->update([
+            'verifikasi' => 0,
+        ]);
+        return redirect()->back()->with('success', 'Data berhasil di Validasi');
+    }
 
 }
