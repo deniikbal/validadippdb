@@ -327,7 +327,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <h5>Data Orang Tua</h5>
+                            <h5>Data Orang Tua Oke</h5>
                             <hr>
                             <div class="row mb-2">
                                 <div class="col-sm-4">
