@@ -735,7 +735,7 @@
                         class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="modal-body">
-                <p class="text-danger"> Yakin mau unvalidasi data oke {{$user->name}}?</p>
+                <p class="text-danger"> Yakin mau unvalidasi data{{$user->name}}?</p>
             </div>
             <div class="modal-footer">
                 <form action="{{route('unverifikasi',$user->id)}}" method="post">
