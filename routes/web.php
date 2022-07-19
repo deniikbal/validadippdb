@@ -9,3 +9,4 @@ Route::post('/update/{id}', [\App\Http\Controllers\StudentController::class, 'up
 Route::post('/validasi/{id}', [\App\Http\Controllers\StudentController::class, 'validasi'])->name('validasi');
 Route::post('/unvalidasi/{id}', [\App\Http\Controllers\StudentController::class, 'unvalidasi'])->name('unvalidasi');
 Route::post('/unverifikasi/{id}', [\App\Http\Controllers\StudentController::class, 'unverifikasi'])->name('unverifikasi');
+Route::get('/download', [\App\Http\Controllers\StudentController::class, 'download'])->name('download');

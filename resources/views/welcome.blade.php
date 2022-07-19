@@ -30,6 +30,7 @@
             <div class="card mt-5 mb-5">
                 <div class="card-header bg-danger text-center">
                     <h2 class="text-white">Validasi Calon Peserta Didik SMA TELKOM BANDUNG</h2>
+                    <a href="{{route('download')}}" class="btn btn-dark btn-sm">Download</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped border-danger" id="example2">
